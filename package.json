@@ -1,11 +1,11 @@
 {
-	"private": true,
-  "name": "ffmpeg-static",
+  "private": true,
+  "name": "@alfienguyen/ffmpeg-static",
   "version": "5.2.0",
   "description": "ffmpeg & ffprobe binaries for macOS, Linux and Windows",
   "workspaces": [
-  	"packages/ffmpeg-static",
-  	"packages/ffprobe-static"
+    "packages/ffmpeg-static",
+    "packages/ffprobe-static"
   ],
   "scripts": {
     "test": "node test.js",
@@ -13,14 +13,14 @@
     "build": "./build-packages.js",
     "prepublishOnly": "npm run lint && npm run build && npm install --workspaces && npm test"
   },
-  "ffmpeg-static": {
+  "@alfienguyen/ffmpeg-static": {
     "binary-path-env-var": "FFMPEG_BIN",
     "binary-release-tag-env-var": "FFMPEG_BINARY_RELEASE",
     "binary-release-tag": "b6.0",
     "binaries-url-env-var": "FFMPEG_BINARIES_URL",
     "executable-base-name": "ffmpeg"
   },
-  "ffprobe-static": {
+  "@alfienguyen/ffprobe-static": {
     "binary-path-env-var": "FFPROBE_BIN",
     "binary-release-tag-env-var": "FFPROBE_BINARY_RELEASE",
     "binary-release-tag": "b6.0",
